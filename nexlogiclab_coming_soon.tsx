@@ -355,12 +355,16 @@ hobouthere .ucer ptuna.ua()`}</pre>
         
         {/* Brand Logo & Tagline */}
         <div className="flex items-center gap-3 group">
-          <div className={`relative w-12 h-12 flex items-center justify-center rounded-2xl border transition-all duration-300 group-hover:scale-105 ${
+          <div className={`relative w-12 h-12 flex items-center justify-center rounded-2xl border overflow-hidden transition-all duration-300 group-hover:scale-105 ${
             isDark 
               ? 'bg-[#0B132B] border-[#00C2E0]/40 shadow-[0_4px_20px_rgba(0,194,224,0.25)]' 
               : 'bg-white border-[#B8DAF2]/80 shadow-[0_4px_20px_rgba(0,194,224,0.15)]'
           }`}>
-            <img src="/nexlogiclab-logo.png" alt="NexLogicLab" className="w-11 h-11 object-contain" />
+            <img
+              src={isDark ? '/nexlogiclab-logo.png' : '/nexlogiclab-logo-light.png'}
+              alt="NexLogicLab"
+              className="w-11 h-11 object-contain"
+            />
           </div>
           <div>
             <div className={`flex items-center gap-0.5 font-extrabold text-xl tracking-tight ${
