@@ -360,7 +360,7 @@ hobouthere .ucer ptuna.ua()`}</pre>
               ? 'bg-[#0B132B] border-[#00C2E0]/40 shadow-[0_4px_20px_rgba(0,194,224,0.25)]' 
               : 'bg-white border-[#B8DAF2]/80 shadow-[0_4px_20px_rgba(0,194,224,0.15)]'
           }`}>
-            <img src="/nexlogiclab-logo.svg" alt="NexLogicLab" className="w-11 h-11 object-contain" />
+            <img src="/nexlogiclab-logo.png" alt="NexLogicLab" className="w-11 h-11 object-contain" />
           </div>
           <div>
             <div className={`flex items-center gap-0.5 font-extrabold text-xl tracking-tight ${
@@ -442,7 +442,7 @@ hobouthere .ucer ptuna.ua()`}</pre>
         </div>
 
         {/* Headline */}
-        <h1 className={`text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 transition-colors duration-500 ${
+        <h1 className={`text-[3rem] font-extrabold tracking-tight leading-[1.1] mb-6 transition-colors duration-500 ${
           isDark ? 'text-white' : 'text-[#0B132B]'
         }`}>
           Pioneering{' '}
@@ -461,7 +461,7 @@ hobouthere .ucer ptuna.ua()`}</pre>
         </p>
 
         {/* Tech Stack Chip Grid */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-3xl mx-auto mb-14">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-4xl mx-auto mb-14">
           {techStack.map((tech, idx) => {
             const Icon = tech.icon;
             return (
@@ -609,7 +609,7 @@ hobouthere .ucer ptuna.ua()`}</pre>
       </main>
 
       {}
-      <footer className={`relative z-10 border-t py-10 px-6 backdrop-blur-md transition-colors duration-500 ${
+      <footer className={`relative z-10 border-t py-4 px-6 backdrop-blur-md transition-colors duration-500 ${
         isDark 
           ? 'bg-[#0B132B]/80 border-[#1B45D2]/40' 
           : 'bg-white/80 border-[#B8DAF2]/60'
@@ -618,9 +618,10 @@ hobouthere .ucer ptuna.ua()`}</pre>
           
           {/* Brand Info */}
           <div className="text-center md:text-left">
-            <img src="/nexlogiclab-logo.svg" alt="NexLogicLab" className="mx-auto md:mx-0 w-44 h-auto" />
-            <p className={`text-xs font-medium mt-0.5 ${
-              isDark ? 'text-slate-400' : 'text-slate-500'
+            <p className={`px-4 py-2 rounded-xl border text-xs font-medium ${
+              isDark 
+                ? 'bg-[#050B18] border-[#1B45D2]/40 text-slate-400' 
+                : 'bg-[#F4F9FD] border-[#B8DAF2] text-slate-500'
             }`}>
               © 2026 NexLogicLab. All rights reserved.
             </p>
