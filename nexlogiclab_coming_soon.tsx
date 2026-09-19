@@ -24,6 +24,18 @@ import {
   Monitor
 } from 'lucide-react';
 
+const getTimeUntilLaunch = () => {
+  const launchTime = new Date(2026, 8, 25).getTime();
+  const remainingSeconds = Math.max(0, Math.floor((launchTime - Date.now()) / 1000));
+
+  return {
+    days: Math.floor(remainingSeconds / 86400),
+    hours: Math.floor((remainingSeconds % 86400) / 3600),
+    minutes: Math.floor((remainingSeconds % 3600) / 60),
+    seconds: remainingSeconds % 60
+  };
+};
+
 export default function App() {
   // Theme state: 'light' or 'dark'
   const [theme, setTheme] = useState('light');
@@ -41,10 +53,10 @@ export default function App() {
 
   // Live countdown state
   const [timeLeft, setTimeLeft] = useState({
-    days: 42,
-    hours: 18,
-    minutes: 25,
-    seconds: 40
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
   });
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -98,14 +110,10 @@ export default function App() {
   };
 
   useEffect(() => {
+    setTimeLeft(getTimeUntilLaunch());
+
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-        if (prev.minutes > 0) return { ...prev, minutes: 59, seconds: 59 };
-        if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        if (prev.days > 0) return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        return prev;
-      });
+      setTimeLeft(getTimeUntilLaunch());
     }, 1000);
 
     return () => clearInterval(timer);
