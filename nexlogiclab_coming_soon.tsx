@@ -352,22 +352,7 @@ hobouthere .ucer ptuna.ua()`}</pre>
               ? 'bg-[#0B132B] border-[#00C2E0]/40 shadow-[0_4px_20px_rgba(0,194,224,0.25)]' 
               : 'bg-white border-[#B8DAF2]/80 shadow-[0_4px_20px_rgba(0,194,224,0.15)]'
           }`}>
-            <svg viewBox="0 0 100 100" className="w-9 h-9 drop-shadow-[0_2px_6px_rgba(0,194,224,0.3)]" fill="none">
-              <path d="M 22 78 C 22 86, 32 86, 35 78 L 35 32 C 35 24, 22 24, 22 32 Z" fill="#00C2E0" />
-              <path d="M 32 30 C 35 22, 60 48, 65 52 L 65 72 C 60 68, 30 38, 32 30 Z" fill="url(#logoGradApp)" />
-              <path d="M 65 22 C 65 14, 78 14, 78 22 L 78 68 C 78 84, 58 84, 58 68 Z" fill="#1B45D2" />
-              <circle cx="28.5" cy="27" r="4.5" fill="#FFFFFF" />
-              <circle cx="71.5" cy="73" r="4.5" fill="#00C2E0" />
-              <circle cx="50" cy="50" r="3.5" fill="#00C2E0" />
-              <line x1="28.5" y1="27" x2="50" y2="50" stroke="#00C2E0" strokeWidth="1.5" strokeDasharray="2 2" />
-              <line x1="50" y1="50" x2="71.5" y2="73" stroke="#1B45D2" strokeWidth="1.5" strokeDasharray="2 2" />
-              <defs>
-                <linearGradient id="logoGradApp" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#00C2E0" />
-                  <stop offset="100%" stopColor="#1B45D2" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="/nexlogiclab-logo.svg" alt="NexLogicLab" className="w-11 h-11 object-contain" />
           </div>
           <div>
             <div className={`flex items-center gap-0.5 font-extrabold text-xl tracking-tight ${
@@ -625,12 +610,7 @@ hobouthere .ucer ptuna.ua()`}</pre>
           
           {/* Brand Info */}
           <div className="text-center md:text-left">
-            <div className={`flex items-center justify-center md:justify-start gap-1 text-base font-extrabold ${
-              isDark ? 'text-white' : 'text-[#0B132B]'
-            }`}>
-              <span>NEXLOGIC</span>
-              <span className="text-[#00C2E0]">LAB</span>
-            </div>
+            <img src="/nexlogiclab-logo.svg" alt="NexLogicLab" className="mx-auto md:mx-0 w-44 h-auto" />
             <p className={`text-xs font-medium mt-0.5 ${
               isDark ? 'text-slate-400' : 'text-slate-500'
             }`}>
